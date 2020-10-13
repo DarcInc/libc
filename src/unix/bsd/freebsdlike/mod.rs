@@ -1352,6 +1352,8 @@ extern "C" {
         len: ::size_t,
         vec: *mut ::c_char,
     ) -> ::c_int;
+    pub fn mount(src: *const ::c_char, target: *const ::c_char, flags: ::c_int, data: *mut ::c_char) -> ::c_int;
+    
     pub fn newlocale(
         mask: ::c_int,
         locale: *const ::c_char,
