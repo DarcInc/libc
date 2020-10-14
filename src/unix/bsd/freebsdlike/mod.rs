@@ -1352,15 +1352,12 @@ extern "C" {
         len: ::size_t,
         vec: *mut ::c_char,
     ) -> ::c_int;
-    pub fn mount(src: *const ::c_char, target: *const ::c_char, flags: ::c_int, data: *mut ::c_char) -> ::c_int;
-    
     pub fn newlocale(
         mask: ::c_int,
         locale: *const ::c_char,
         base: ::locale_t,
     ) -> ::locale_t;
-    pub fn nl_langinfo_l(item: ::nl_item, locale: ::locale_t)
-        -> *mut ::c_char;
+    pub fn nl_langinfo_l(item: ::nl_item, locale: ::locale_t) -> *mut ::c_char;
     pub fn pipe2(fds: *mut ::c_int, flags: ::c_int) -> ::c_int;
     pub fn ppoll(
         fds: *mut ::pollfd,
